@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h2> Javascript Function </h2>
+	<p> in this example the fullname method of person is <b> applied </b> on person1: </p>
+
+	<p id="demo"></p>
+
+	<script >
+		var person = {
+			fullName:function(){
+				return this.firstName + "" + this.lastName;
+			}
+		}
+		var person1 = {
+			firstName :"John",
+			lastName : "doe",
+		}
+		var x = person.fullName.apply(person1);
+		document.getElementById("demo").innerHTML = x;
+	</script>
+</body>
+</html>
